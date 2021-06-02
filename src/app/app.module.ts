@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -10,11 +10,14 @@ import { ContactComponent } from './contact/contact.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NewProductsComponent } from './new-products/new-products.component';
+import { FeaturedProductsComponent } from './featured-products/featured-products.component';
+import { ManufacturesComponent } from './manufactures/manufactures.component';
 
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'contact', component: ContactComponent },
+  
   
 ];
 
@@ -27,7 +30,9 @@ const routes: Routes = [
     DashboardComponent,
     ContactComponent,
     SidebarComponent,
-    NewProductsComponent
+    NewProductsComponent,
+    FeaturedProductsComponent,
+    ManufacturesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
 })
 export class AppModule { }
