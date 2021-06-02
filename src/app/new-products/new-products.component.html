@@ -3,10 +3,7 @@
             <div class="new_prdh">
                 <h3 class="new_border">New Products</h3>
                 <div class="new_imgprd">
-                    <a href="#"><img src="assets/img/e.jpg" alt="bangle"></a>
-                    <a href="#"><img src="assets/img/f.jpg" alt="bangle"></a>
-                    <a href="#"><img src="assets/img/g.jpg" alt="bangle"></a>
-                    <a href="#"><img src="assets/img/h.jpg" alt="bangle"></a>
+                    <a *ngFor = "let imageLink of imageLinks" href= "{{imageLink.path}}"><img src="{{imageLink.src}}" alt="{{imageLink.title}}"></a>
                 </div>
             </div>
         <div class="col3">
@@ -17,8 +14,7 @@
                         <p><strong>$22.00</strong></p>
                         <a href="#"><button class="btn btn_add">Add to Cart</button></a>
                         <div class="cart_links">
-                            <p><a href="#">Add to wish list</a></p>
-                            <p><a href="#">Add to compare</a></p>
+                            <p><a *ngFor="let cartLink of cartLinks" href="{{cartLink.path}}">{{cartLink.desc}}</a></p>
                         </div>
                     </div>
                 </div>
@@ -30,8 +26,7 @@
                     <p><strong>$22.00</strong></p>
                     <a href="#"><button class="btn btn_add">Add to Cart</button></a>
                     <div class="cart_links">
-                        <p><a href="#">Add to wish list</a></p>
-                        <p><a href="#">Add to compare</a></p>
+                        <p><a *ngFor="let cartLink of cartLinks" href="{{cartLink.path}}">{{cartLink.desc}}</a></p>
                     </div>
                 </div>
             </div>
@@ -42,8 +37,8 @@
                     <p><strong>$22.00</strong></p>
                     <a href="#"><button class="btn btn_add">Add to Cart</button></a>
                     <div class="cart_links">
-                        <p><a href="#">Add to wish list</a></p>
-                        <p><a href="#">Add to compare</a></p>
+                        <p><a *ngFor="let cartLink of cartLinks" href="{{cartLink.path}}">{{cartLink.desc}}</a></p>
+                        
                     </div>
                 </div>
             </div>
