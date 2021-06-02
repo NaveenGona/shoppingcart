@@ -3,17 +3,8 @@
     <div class="links">
         <div class="side_links">
             <ul>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Watches</a></li>
-                <li><a href="#">Fine Jewelry</a></li>
-                <li><a href="#">Fashion Jewelry</a></li>
-                <li><a href="#">Engagement & Wedding</a></li>
-                <li><a href="#">Men's Jewelry</a></li>
-                <li><a href="#">Vintage & Antique</a></li>
-                <li><a href="#">Loose Diamonds</a></li>
-                <li><a href="#">Loose Beads</a></li>
-                <li><a href="#">See All Jewelry & Watches</a></li>
-            </ul>
+                <li *ngFor="let sideBarLink of sideBarLinks"><a href="{{sideBarLink.path}}">{{sideBarLink.desc}}</a></li>
+                </ul>
             <div class="btn_total">
                 <a href="#"><h4>Total amount</h4>
                 </a>

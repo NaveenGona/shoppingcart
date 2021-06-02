@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactComponent } from './contact/contact.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NewProductsComponent } from './new-products/new-products.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     MainComponent,
     DashboardComponent,
     ContactComponent,
-    SidebarComponent
+    SidebarComponent,
+    NewProductsComponent
   ],
   imports: [
     BrowserModule,
