@@ -3,12 +3,8 @@
         <div class="manufact">
             <h2>Manufactures</h2>
             <div class="main_img">
-                <a href="#"><img src="assets/img/1.png" alt="image"></a>
-                <a href="#"><img src="assets/img/2.png" alt="image"></a>
-                <a href="#"><img src="assets/img/3.png" alt="image"></a>
-                <a href="#"><img src="assets/img/4.png" alt="image"></a>
-                <a href="#"><img src="assets/img/5.png" alt="image"></a>
-                <a href="#"><img src="assets/img/6.png" alt="image"></a>
+                <a *ngFor="let imageLink of imageLinks" href="{{imageLink.path}}"><img src="{{imageLink.src}}" alt="{{imageLink.title}}"></a>
+               
             </div>
         </div>
     </div>
